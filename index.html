@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripciones 2027 - Instituto Por Cooperativa Tacatón</title>
-    <!-- Tailwind CSS para diseño moderno -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .bg-pastel-blue { background-color: #f0f4f8; }
+        .bg-pastel-blue { background-color: #f0f7f4; }
         @keyframes pulse-soft {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.02); }
@@ -18,23 +17,202 @@
         }
     </style>
 </head>
-<body class="bg-pastel-blue text-slate-700 font-sans antialiased selection:bg-sky-200 selection:text-sky-900">
-
-    <!-- Elemento de Audio Oculto para Efectos Interactivos -->
+<body class="bg-pastel-blue text-slate-700 font-sans antialiased selection:bg-emerald-200 selection:text-emerald-900">
     <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
-
-    <!-- Barra Superior de Anuncio Dinámica -->
-    <div class="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white text-center py-2.5 px-4 text-sm font-bold tracking-wide shadow-sm animate-pulse-soft">
-        🎉 ¡Inscripciones Abiertas Ciclo Escolar 2027 • Educación Presencial con Apoyos y Becas! 🎉
+    
+    <!-- Barra Superior -->
+    <div class="bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500 text-white text-center py-2.5 px-4 text-sm font-bold tracking-wide shadow-sm animate-pulse-soft">
+        🎉 ¡Inscripciones Abiertas Ciclo Escolar 2027 • Educación Presencial con Apoyos! 🎉
     </div>
-
-    <!-- Navegación Principal -->
-    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-sky-100 shadow-xs">
+    
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-100 shadow-xs">
         <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img src="img/escudo.jpg" alt="Escudo Tacatón" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-sky-200">
+                <img src="img/escudo.png" alt="Escudo Tacatón" class="w-12 h-12 object-contain">
                 <div>
                     <span class="block font-extrabold text-slate-800 text-base leading-tight">Inst. Por Coop. Tacatón</span>
+                    <span class="text-xs text-emerald-600 font-semibold">¡El Estudio Es Desarrollo!</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#modalidad" class="hover:text-emerald-600 transition">Modalidad</a>
+                <a href="#beneficios" class="hover:text-emerald-600 transition">Cuotas y Apoyos</a>
+                <a href="#ubicacion" class="hover:text-emerald-600 transition">Ubicación</a>
+                <a href="#contacto" class="hover:text-emerald-600 transition">Contacto</a>
+            </div>
+            <a href="https://wa.me/50254627397" target="_blank" onclick="playAudio()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-5 py-2.5 rounded-full shadow-md transition transform hover:scale-105 text-sm flex items-center">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Contáctanos
+            </a>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="py-16 md:py-24 px-4 bg-gradient-to-b from-sky-50 via-teal-50/40 to-emerald-50/30 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-4 shadow-xs">
+                ✨ Excelencia Educativa Presencial • Amatitlán 2027 ✨
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                Construye Tu Futuro Con Clases <span class="text-emerald-600 underline decoration-emerald-300 decoration-wavy">100% Presenciales</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Formación integral en el aula con cuotas cooperativas accesibles, apoyos en útiles escolares y bolsa de víveres, además de una plataforma digital para el control de los padres.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/50254627397" target="_blank" onclick="playAudio()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-emerald-200 transition transform hover:-translate-y-1 text-base flex items-center justify-center">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Escríbenos por WhatsApp
+                </a>
+                <a href="#beneficios" onclick="playAudio()" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold px-8 py-4 rounded-2xl transition text-base shadow-xs flex items-center justify-center">
+                    <i class="fa-solid fa-graduation-cap mr-2 text-emerald-600"></i> Conoce Cuotas y Apoyos
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modalidad -->
+    <section id="modalidad" class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-3">Educación Presencial con Control Digital</h2>
+            <p class="text-slate-600">Lo mejor de ambos mundos: la convivencia en el aula y la supervisión tecnológica al alcance de tu mano.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Clases 100% Presenciales</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Asistencia regular al instituto para garantizar un aprendizaje profundo, interacción social sana, laboratorios y actividades extracurriculares dirigidas por docentes calificados en el establecimiento.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-100 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Plataforma de Control para Papás</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Pensada especialmente para aquellos padres que por sus labores diarias no pueden acercarse constantemente al establecimiento; permite revisar notas, avisos y asistencia de manera digital.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cuotas y Apoyos -->
+    <section id="beneficios" class="py-16 bg-white border-y border-slate-100 px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+                    Cuotas y Apoyos
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Mensualidad Accesible + Apoyos Reales</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Al ser un instituto por cooperativa se paga una <strong>mensualidad accesible</strong> destinada al sostenimiento de la institución. 
+                    Además, se brinda apoyo a los estudiantes con <strong>útiles escolares</strong> y <strong>bolsa de víveres</strong> para aliviar la carga económica de las familias.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-700 font-medium">
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-3 text-lg"></i> Mensualidad cooperativa moderada</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-3 text-lg"></i> Apoyo con útiles escolares</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-3 text-lg"></i> Bolsa de víveres para las familias</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-3 text-lg"></i> Transparencia en aportes y gestiones</li>
+                </ul>
+            </div>
+            <div class="bg-gradient-to-br from-sky-50 to-emerald-50 p-8 rounded-3xl shadow-md border border-emerald-100 text-center relative">
+                <div class="absolute -top-3 -right-3 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">¡Importante!</div>
+                <div class="text-emerald-500 text-5xl mb-4"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <h3 class="text-xl font-bold text-slate-800 mb-2">No es educación gratuita</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Se paga una mensualidad. El apoyo consiste en útiles escolares y bolsa de víveres para quienes más lo necesitan.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Instituciones Aliadas -->
+    <section class="py-16 px-4 max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold text-slate-800 mb-3">Con el Respaldo de Instituciones Aliadas</h2>
+        <p class="text-slate-500 text-sm mb-10 max-w-xl mx-auto">Trabajamos hombro a hombro con organizaciones firmemente comprometidas con la juventud estudiosa.</p>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
+                <img src="img/pnc.jpg" alt="Policía Nacional Civil" class="max-h-20 object-contain mb-3">
+                <span class="text-xs font-bold text-slate-700">Policía Nacional Civil</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
+                <img src="img/upa.png" alt="Cooperativa UPA" class="max-h-20 object-contain mb-3">
+                <span class="text-xs font-bold text-slate-700">Cooperativa UPA</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
+                <img src="img/semucaf.jpg" alt="SEMUCAF" class="max-h-20 object-contain mb-3">
+                <span class="text-xs font-bold text-slate-700">SEMUCAF</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
+                <img src="img/worldvision.png" alt="World Vision" class="max-h-20 object-contain mb-3">
+                <span class="text-xs font-bold text-slate-700">Visión Mundial</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ubicación y Contacto -->
+    <section id="ubicacion" class="py-16 bg-gradient-to-b from-sky-50/60 to-emerald-50/40 border-y border-emerald-100 px-4">
+        <div class="max-w-5xl mx-auto text-center mb-10">
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+                Visítanos o Comunícate
+            </span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Información de Contacto y Dirección</h2>
+            <p class="text-slate-600 text-sm">Te esperamos en nuestras instalaciones presenciales o escríbenos por WhatsApp.</p>
+        </div>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="bg-white p-8 rounded-3xl border border-sky-100 text-center md:text-left shadow-xs">
+                <div class="w-12 h-12 bg-sky-500 text-white rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto md:mx-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2">Nuestra Dirección</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Km 35.5 Circunvalación al Lago de Amatitlán, Aldea Tacatón, Amatitlán, Guatemala.
+                </p>
+            </div>
+            <div id="contacto" class="bg-white p-8 rounded-3xl border border-emerald-100 text-center shadow-xs">
+                <div class="w-12 h-12 bg-emerald-500 text-white rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-3">Teléfonos con WhatsApp</h3>
+                <div class="flex flex-col sm:flex-row justify-center gap-3">
+                    <a href="https://wa.me/50254627397" target="_blank" onclick="playAudio()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-sm transition flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp mr-2 text-base"></i> 5462-7397
+                    </a>
+                    <a href="https://wa.me/50236250040" target="_blank" onclick="playAudio()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm shadow-sm transition flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp mr-2 text-base"></i> 3625-0040
+                    </a>
+                </div>
+                <p class="text-xs text-slate-500 mt-3">¡Ambos números disponen de WhatsApp activo!</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/50254627397" target="_blank" onclick="playAudio()" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg z-50 transition transform hover:scale-110" title="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 px-4 text-center text-xs text-slate-500">
+        <p class="font-bold text-slate-700 mb-1">Instituto Por Cooperativa Tacatón</p>
+        <p class="mb-3">"El Estudio Es Desarrollo" • Km 35.5 Circunvalación al Lago de Amatitlán, Aldea Tacatón</p>
+        <p>&copy; 2027 • Todos los derechos reservados.</p>
+    </footer>
+    
+    <script>
+        function playAudio() {
+            const sound = document.getElementById('clickSound');
+            if (sound) {
+                sound.currentTime = 0;
+                sound.play().catch(e => console.log("Audio play blocked by browser policy"));
+            }
+        }
+    </script>
+</body>
+</html>                    <span class="block font-extrabold text-slate-800 text-base leading-tight">Inst. Por Coop. Tacatón</span>
                     <span class="text-xs text-sky-600 font-semibold">¡Estudio Es Desarrollo!</span>
                 </div>
             </div>
