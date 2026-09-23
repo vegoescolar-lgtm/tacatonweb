@@ -8,184 +8,165 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .bg-pastel-cream { background-color: #fdf8f6; }
-        /* Efecto de parpadeo suave para llamadas a la acción */
+        .bg-pastel-blue { background-color: #f0f4f8; }
         @keyframes pulse-soft {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
+            50% { transform: scale(1.02); }
         }
         .animate-pulse-soft {
             animation: pulse-soft 3s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-pastel-cream text-slate-700 font-sans antialiased selection:bg-rose-200 selection:text-rose-900">
+<body class="bg-pastel-blue text-slate-700 font-sans antialiased selection:bg-sky-200 selection:text-sky-900">
 
     <!-- Elemento de Audio Oculto para Efectos Interactivos -->
     <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
 
     <!-- Barra Superior de Anuncio Dinámica -->
-    <div class="bg-gradient-to-r from-rose-400 via-pink-400 to-amber-400 text-white text-center py-2.5 px-4 text-sm font-bold tracking-wide shadow-sm animate-pulse-soft">
-        🎉 ¡Inscripciones Abiertas Ciclo Escolar 2027 • Primer Grado Básico 100% Gratis! 🎉
+    <div class="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white text-center py-2.5 px-4 text-sm font-bold tracking-wide shadow-sm animate-pulse-soft">
+        🎉 ¡Inscripciones Abiertas Ciclo Escolar 2027 • Educación Presencial de Calidad! 🎉
     </div>
 
     <!-- Navegación Principal -->
-    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-rose-100 shadow-xs">
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-sky-100 shadow-xs">
         <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <!-- Imagen del Escudo del Instituto -->
-                <img src="img/escudo.jpg" alt="Escudo Tacatón" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-rose-200">
+                <img src="img/escudo.jpg" alt="Escudo Tacatón" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-sky-200">
                 <div>
                     <span class="block font-extrabold text-slate-800 text-base leading-tight">Inst. Por Coop. Tacatón</span>
-                    <span class="text-xs text-rose-500 font-semibold">¡Estudio Es Desarrollo!</span>
+                    <span class="text-xs text-sky-600 font-semibold">¡Estudio Es Desarrollo!</span>
                 </div>
             </div>
             <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
-                <a href="#beneficios" class="hover:text-rose-500 transition">Beneficios</a>
-                <a href="#ubicacion" class="hover:text-rose-500 transition">Ubicación</a>
-                <a href="#contacto" class="hover:text-rose-500 transition">Contacto</a>
+                <a href="#modalidad" class="hover:text-sky-600 transition">Modalidad</a>
+                <a href="#beneficios" class="hover:text-sky-600 transition">Cuotas y Becas</a>
+                <a href="#ubicacion" class="hover:text-sky-600 transition">Ubicación</a>
+                <a href="#contacto" class="hover:text-sky-600 transition">Contacto</a>
             </div>
-            <a href="#inscripcion" onclick="playAudio()" class="bg-rose-500 hover:bg-rose-600 text-white font-medium px-5 py-2.5 rounded-full shadow-md transition transform hover:scale-105 text-sm flex items-center">
+            <a href="#inscripcion" onclick="playAudio()" class="bg-sky-600 hover:bg-sky-700 text-white font-medium px-5 py-2.5 rounded-full shadow-md transition transform hover:scale-105 text-sm flex items-center">
                 <i class="fa-solid fa-file-pen mr-2"></i> Inscríbete Online
             </a>
         </div>
     </header>
 
     <!-- Sección Hero / Portada Llamativa -->
-    <section class="py-16 md:py-24 px-4 bg-gradient-to-b from-rose-50/60 via-sky-50/40 to-pastel-cream relative overflow-hidden">
+    <section class="py-16 md:py-24 px-4 bg-gradient-to-b from-sky-50 via-blue-50/50 to-pastel-blue relative overflow-hidden">
         <div class="max-w-5xl mx-auto text-center relative z-10">
-            <span class="bg-amber-100 text-amber-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-4 shadow-xs">
-                ✨ Cupos Limitados • Amatitlán 2027 ✨
+            <span class="bg-sky-100 text-sky-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-4 shadow-xs">
+                ✨ Excelencia Educativa Presencial • Amatitlán 2027 ✨
             </span>
             <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-                Construye Tu Futuro <span class="text-rose-500 underline decoration-rose-300 decoration-wavy">Sin Salir de Casa</span>
+                Construye Tu Futuro Con Clases <span class="text-sky-600 underline decoration-sky-300 decoration-wavy">100% Presenciales</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Aprovecha nuestra plataforma digital. Educación secundaria gratuita, apoyos escolares integrales y alianzas institucionales para tu éxito.
+                Formación integral en el aula respaldada por una plataforma digital exclusiva para que los padres lleven el control detallado del rendimiento escolar.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#inscripcion" onclick="playAudio()" class="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-rose-200 transition transform hover:-translate-y-1 text-base flex items-center justify-center">
+                <a href="#inscripcion" onclick="playAudio()" class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-sky-200 transition transform hover:-translate-y-1 text-base flex items-center justify-center">
                     <i class="fa-solid fa-rocket mr-2 text-lg"></i> Preinscripción Rápida 2027
                 </a>
                 <a href="#beneficios" onclick="playAudio()" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold px-8 py-4 rounded-2xl transition text-base shadow-xs flex items-center justify-center">
-                    <i class="fa-solid fa-gift mr-2 text-rose-500"></i> Conoce Los Beneficios
+                    <i class="fa-solid fa-graduation-cap mr-2 text-sky-600"></i> Conoce Cuotas y Becas
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Beneficios Exclusivos con Estilo Pastel Moderno -->
-    <section id="beneficios" class="py-16 px-4 max-w-6xl mx-auto">
+    <!-- Modalidad Presencial y Plataforma para Padres -->
+    <section id="modalidad" class="py-16 px-4 max-w-6xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-slate-900 mb-3">¿Qué Incluye Tu Inscripción 2027?</h2>
-            <p class="text-slate-600">Apoyos totales diseñados para garantizar tu estudio sin preocupaciones económicas.</p>
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-3">Educación Presencial con Control Digital</h2>
+            <p class="text-slate-600">Lo mejor de ambos mundos: la convivencia en el aula y la supervisión tecnológica al alcance de tu mano.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-rose-100 hover:shadow-md transition transform hover:-translate-y-1">
-                <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
-                    <i class="fa-solid fa-school-flag"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-3">Estudio 100% Gratis</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Primer grado básico completamente gratuito. Sin cuotas ocultas de ingreso, abriendo las puertas de la educación media para todos.
-                </p>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100 hover:shadow-md transition transform hover:-translate-y-1">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-sky-100 hover:shadow-md transition">
                 <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
-                    <i class="fa-solid fa-box-open"></i>
+                    <i class="fa-solid fa-chalkboard-user"></i>
                 </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-3">Útiles y Alimentos</h3>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Clases 100% Presenciales</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                    Dotación de útiles escolares esenciales para tus clases y entrega periódica de bolsa de alimentos de apoyo para tu hogar.
+                    Asistencia regular al instituto para garantizar un aprendizaje profundo, interacción social sana, laboratorios y actividades extracurriculares dirigidas por docentes calificados.
                 </p>
             </div>
 
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-amber-100 hover:shadow-md transition transform hover:-translate-y-1">
-                <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
-                    <i class="fa-solid fa-award"></i>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-blue-100 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
                 </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-3">Becas y Apoyos Especiales</h3>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Plataforma de Control para Papás</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                    Acceso preferencial a programas de becas gubernamentales y apoyos de entidades particulares aliadas al instituto.
+                    Pensada especialmente para aquellos padres que por su trabajo no pueden acercarse constantemente al establecimiento; permite revisar notas, avisos y asistencia de manera digital.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Seguimiento Digital desde Casa -->
-    <section class="py-16 bg-sky-50/60 border-y border-sky-100 px-4">
+    <!-- Cuotas, Cooperativa y Becas -->
+    <section id="beneficios" class="py-16 bg-white border-y border-slate-100 px-4">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="bg-sky-200/70 text-sky-900 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
-                    Innovación Digital 2027
+                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+                    Apoyo Económico
                 </span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Seguimiento Digital: No Salgas de Casa</h2>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Cuotas Accesibles y Programa de Becas</h2>
                 <p class="text-slate-600 mb-6 leading-relaxed">
-                    Implementamos un sistema interactivo en línea. Desde la comodidad de tu hogar podrás realizar tu preinscripción, enviar tu papelería y consultar el estado de tus beneficios escolares de forma rápida y segura.
+                    Al ser un instituto por cooperativa, se maneja una cuota mensual accesible para el sostenimiento de la institución. Sin embargo, **contamos con becas de apoyo** destinadas a aquellos estudiantes que demuestren deseos de superación y enfrenten dificultades económicas.
                 </p>
                 <ul class="space-y-3 text-sm text-slate-700 font-medium">
-                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-3 text-lg"></i> Preinscripción digital automatizada</li>
-                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-3 text-lg"></i> Avisos directos a tu teléfono</li>
-                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-3 text-lg"></i> Asesoría virtual permanente</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-sky-600 mr-3 text-lg"></i> Cuotas cooperativas moderadas</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-sky-600 mr-3 text-lg"></i> Opciones de becas para casos especiales</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-sky-600 mr-3 text-lg"></i> Transparencia total en aportes</li>
                 </ul>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-md border border-sky-100 text-center relative">
-                <div class="absolute -top-3 -right-3 bg-rose-400 text-white text-xs font-bold px-3 py-1 rounded-full animate-bounce">¡Nuevo!</div>
-                <div class="text-rose-500 text-6xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
-                <h3 class="text-xl font-bold text-slate-800 mb-2">Comodidad y Tecnología</h3>
-                <p class="text-slate-500 text-sm">Gestionamos todo pensando en el bienestar y seguridad de las familias amatitlanecas.</p>
+            <div class="bg-pastel-blue p-8 rounded-3xl shadow-md border border-sky-200 text-center relative">
+                <div class="absolute -top-3 -right-3 bg-sky-600 text-white text-xs font-bold px-3 py-1 rounded-full">¡Infórmate!</div>
+                <div class="text-sky-600 text-6xl mb-4"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h3 class="text-xl font-bold text-slate-800 mb-2">¡Nadie se queda sin estudiar!</h3>
+                <p class="text-slate-600 text-sm">Pregunta por los requisitos para aplicar a nuestras becas de ayuda escolar este 2027.</p>
             </div>
         </div>
     </section>
 
-    <!-- Instituciones Aliadas con Logos Reales -->
+    <!-- Instituciones Aliadas -->
     <section class="py-16 px-4 max-w-6xl mx-auto text-center">
         <h2 class="text-3xl font-extrabold text-slate-800 mb-3">Con el Respaldo de Instituciones Aliadas</h2>
         <p class="text-slate-500 text-sm mb-10 max-w-xl mx-auto">Trabajamos hombro a hombro con organizaciones firmemente comprometidas con la juventud estudiosa.</p>
         
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
-            <!-- PNC -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
                 <img src="img/pnc.jpg" alt="Policía Nacional Civil" class="max-h-20 object-contain mb-3">
                 <span class="text-xs font-bold text-slate-700">Policía Nacional Civil</span>
             </div>
-            <!-- Cooperativa UPA -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
                 <img src="img/upa.png" alt="Cooperativa UPA" class="max-h-20 object-contain mb-3">
                 <span class="text-xs font-bold text-slate-700">Cooperativa UPA</span>
             </div>
-            <!-- SEMUCAF -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
                 <img src="img/semucaf.jpg" alt="SEMUCAF" class="max-h-20 object-contain mb-3">
                 <span class="text-xs font-bold text-slate-700">SEMUCAF</span>
             </div>
-            <!-- World Vision -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center h-44 hover:shadow-md transition">
                 <img src="img/worldvision.png" alt="World Vision" class="max-h-20 object-contain mb-3">
                 <span class="text-xs font-bold text-slate-700">Visión Mundial</span>
             </div>
         </div>
-        <div class="mt-8 inline-block bg-gradient-to-r from-rose-100 to-amber-100 text-rose-800 border border-rose-200 px-6 py-3 rounded-2xl text-sm font-bold shadow-xs">
-            ✨ ¡Y muchas sorpresas más preparadas para este ciclo escolar 2027! ✨
-        </div>
     </section>
 
     <!-- Sección de Ubicación y Teléfonos con WhatsApp -->
-    <section id="ubicacion" class="py-16 bg-white border-y border-slate-100 px-4">
+    <section id="ubicacion" class="py-16 bg-sky-50/50 border-y border-sky-100 px-4">
         <div class="max-w-5xl mx-auto text-center mb-10">
             <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
                 Visítanos o Comunícate
             </span>
             <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Información de Contacto y Dirección</h2>
-            <p class="text-slate-600 text-sm">Estamos para atenderte de forma inmediata por llamadas o WhatsApp.</p>
+            <p class="text-slate-600 text-sm">Te esperamos en nuestras instalaciones presenciales o escríbenos por WhatsApp.</p>
         </div>
 
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <!-- Dirección -->
-            <div class="bg-pastel-cream p-8 rounded-3xl border border-rose-100 text-center md:text-left shadow-xs">
-                <div class="w-12 h-12 bg-rose-500 text-white rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto md:mx-0">
+            <div class="bg-white p-8 rounded-3xl border border-sky-100 text-center md:text-left shadow-xs">
+                <div class="w-12 h-12 bg-sky-600 text-white rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto md:mx-0">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <h3 class="text-lg font-bold text-slate-800 mb-2">Nuestra Dirección</h3>
@@ -194,8 +175,7 @@
                 </p>
             </div>
 
-            <!-- Teléfonos WhatsApp -->
-            <div class="bg-pastel-cream p-8 rounded-3xl border border-emerald-100 text-center shadow-xs">
+            <div class="bg-white p-8 rounded-3xl border border-emerald-100 text-center shadow-xs">
                 <div class="w-12 h-12 bg-emerald-500 text-white rounded-2xl flex items-center justify-center text-xl mb-4 mx-auto">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
@@ -214,8 +194,8 @@
     </section>
 
     <!-- Sección de Formulario / Inscripción -->
-    <section id="inscripcion" class="py-16 bg-rose-50/40 px-4">
-        <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-rose-100">
+    <section id="inscripcion" class="py-16 px-4">
+        <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-sky-100">
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-extrabold text-slate-900 mb-2">Preinscripción Ciclo 2027</h2>
                 <p class="text-slate-500 text-sm">Completa tus datos y nos pondremos en contacto contigo de inmediato.</p>
@@ -223,21 +203,21 @@
             <form class="space-y-4" onsubmit="event.preventDefault(); alert('¡Preinscripción enviada con éxito! Nos comunicaremos contigo pronto por WhatsApp.');">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo del Estudiante</label>
-                    <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-400" placeholder="Ej. Carlos Daniel Pérez">
+                    <input type="text" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Ej. Carlos Daniel Pérez">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Grado a Inscribir</label>
-                    <input type="text" disabled value="Primer Grado Básico" class="w-full px-4 py-3 bg-slate-100 border border-slate-200 rounded-xl text-sm text-slate-500 cursor-not-allowed">
+                    <input type="text" disabled value="Primer Grado Básico (Presencial)" class="w-full px-4 py-3 bg-slate-100 border border-slate-200 rounded-xl text-sm text-slate-500 cursor-not-allowed">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Teléfono de Contacto / WhatsApp</label>
-                    <input type="tel" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-400" placeholder="Ej. 54627397">
+                    <input type="tel" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Ej. 54627397">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico (Opcional)</label>
-                    <input type="email" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-400" placeholder="correo@ejemplo.com">
+                    <input type="email" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="correo@ejemplo.com">
                 </div>
-                <button type="submit" onclick="playAudio()" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-3.5 rounded-xl shadow-md transition text-sm mt-4">
+                <button type="submit" onclick="playAudio()" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3.5 rounded-xl shadow-md transition text-sm mt-4">
                     Enviar Datos de Preinscripción
                 </button>
             </form>
